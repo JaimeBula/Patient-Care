@@ -1,0 +1,15 @@
+.patientCareMenu{
+    width: 300px;
+    padding: 10px;
+    background-color: #1b1e24;
+    color: #ffffff;
+}
+
+.mainContainer{
+    height: calc(100% - 150px);
+    background-color: #e5e9ec;
+}
+
+.mat-drawer-container{
+    background-color: #e5e9ec !important;
+}

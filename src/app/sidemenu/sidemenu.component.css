@@ -1,0 +1,53 @@
+a:link {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color:  #673ab7;
+}
+
+.menuItemContainer{
+    height: 50px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 3px;
+    border-bottom-color: #1e2127;
+    border-style: solid;
+}
+
+.menuAvatar{
+    height: 100px;
+}
+
+.avatarTitle{
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.avatarImage{
+    height: 75px;
+
+}
+
+.avatarName{
+    color: #ffffff;
+    line-height: 12px;
+}
+
+.avatarNameContainer{
+    margin-top: 20px;
+}
+
+.menuIcon{
+    color: #673ab7;
+    font-size: 22px;
+    margin-right: 15px;
+    margin-left: 5px;
+}
