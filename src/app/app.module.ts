@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import 'hammerjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MatInputModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule, 
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
