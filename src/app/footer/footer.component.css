@@ -1,5 +1,19 @@
+footer {
+  height: 55px;
+  background-color: #d9d9d9;
+}
 
-footer{
-    height: 55px;
-    background-color: #d9d9d9;
+.logOutButton {
+  width: 300px;
+  background-color: #22262e;
+  color: #4d535c;
+}
+
+.shutDownText {
+  margin-right: 5px;
+}
+
+.shutDownIcon {
+  font-size: 20px;
+  margin-top: 3px;
 }
