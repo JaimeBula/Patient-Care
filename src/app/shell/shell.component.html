@@ -1,8 +1,9 @@
 <app-header></app-header>
-<div class="mainContainer" >
+
+<div class="mainContainer">
   <mat-sidenav-container class="h-100">
-    <mat-sidenav class="patientCareMenu h-100" mode="side" opened>
-<app-sidemenu></app-sidemenu>
+    <mat-sidenav #snav class="patientCareMenu h-100" mode="side">
+      <app-sidemenu></app-sidemenu>
     </mat-sidenav>
     <mat-sidenav-content class="h-100">
       <router-outlet id="shellOutlet"></router-outlet>

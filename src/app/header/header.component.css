@@ -38,3 +38,21 @@ header{
 .seachBoxHeader{
     width: 300px;
 }
+
+.navButton{
+    background-color: #673ab7;
+    color: #ffffff;
+}
+
+.navButtonContainer{
+    background-color: #673ab7;
+    color: #ffffff;
+    margin-top:5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .headerLogo {
+        width: 100%;
+    }
+}

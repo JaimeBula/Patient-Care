@@ -11,26 +11,35 @@
           </div>
         </div>
       </div>
-      <div class="col"></div>
-      <div class="col-sm-2 d-flex justify-content-end nopadding align-items-center ">
-     
-          <mat-form-field >
+      <div class=" d-block d-sm-none  col-2 navButton">
+        <div class="d-flex justify-content-center  align-items-center navButtonContainer">
+          <button mat-icon-button (click)="toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class=" d-none d-sm-block  col"></div>
+      <div class="d-none d-sm-block col-sm-2  nopadding  ">
+        <div class="d-flex justify-content-end  align-items-center ">
+          <mat-form-field>
 
             <input matInput placeholder="Search" value="" class="seachBoxHeader">
             <i matSuffix class="fa fa-search"></i>
           </mat-form-field>
-
+        </div>
       </div>
-      <div class="col-sm-2 d-flex justify-content-end align-items-center">
-        <div class="menuAvatar d-flex align-items-center justify-content-around">
-          <div>
-            <span class="headerPipe">|</span>
-          </div>
-          <div>
-            <img src="./assets/images/avatar.jpg" class="img-circle rounded-circle headerAvatarImage" />
-          </div>
-          <div class="avatarNameContainer">
-            <span class="avatarHeaderName">Joseph Lister</span> <br>
+      <div class=" d-none d-sm-block col-sm-2">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="menuAvatar d-flex align-items-center justify-content-around">
+            <div>
+              <span class="headerPipe">|</span>
+            </div>
+            <div>
+              <img src="./assets/images/avatar.jpg" class="img-circle rounded-circle headerAvatarImage" />
+            </div>
+            <div class="avatarNameContainer">
+              <span class="avatarHeaderName">Joseph Lister</span> <br>
+            </div>
           </div>
         </div>
       </div>
