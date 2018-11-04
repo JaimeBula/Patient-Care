@@ -26,6 +26,7 @@ export class ListpatientsComponent implements OnInit {
     "firstName",
     "registeredDate",
     "doctorName",
+    "phone",
     "email",
     "street",
     "city",

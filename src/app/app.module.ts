@@ -25,7 +25,8 @@ import {
   MatSelectModule,
   MatDividerModule,
   MatBottomSheetConfig,
-  MatBottomSheetModule
+  MatBottomSheetModule,
+  MatRippleModule
 } from "@angular/material";
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FormsModule } from "@angular/forms";
@@ -61,7 +62,8 @@ import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
     BrowserModule,
     MatDividerModule,
     FormsModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    MatRippleModule
   ],
   providers: [MatBottomSheetConfig],
   bootstrap: [AppComponent],

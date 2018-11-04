@@ -1,3 +1,40 @@
 .patientListContainer{
     padding: 20px;
 }
+
+.patientStackContainer{
+    background-color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+@media screen and (min-width: 601px) {
+    .patientTable {
+        display: inline;
+    }
+    .patientStack {
+        display: none;
+    }
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-width: 600px) {
+    .patientTable {
+        display: none;
+    }
+    .patientStack {
+        display: inline;
+    }
+
+    .patientListContainer{
+        padding: 2px;
+    }
+}
