@@ -21,6 +21,9 @@ export class Patient extends Person {
     super();
 
     this.addresses = new Array<Address>();
+    let address = new Address();
+    address.type = "HOME";
+    this.addresses.push(address);
   }
   registeredDate: Date;
   doctor: number;
