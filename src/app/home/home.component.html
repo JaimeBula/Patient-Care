@@ -1,5 +1,5 @@
 <div class="p-2">
-  <h5>
+  <h5 i18n>
     Welcome to Patient Care.
   </h5>
   <mat-divider></mat-divider>
@@ -7,7 +7,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm text-center p-3">
-        Doctors by Title
+       <span i18n>Soctors by Title</span>
         <mat-divider></mat-divider>
         <div style="display: block">
           <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
@@ -15,7 +15,7 @@
       </div>
       <br>
       <div class="col-sm text-center p-3">
-        Total Patients
+          <span i18n>Total Patients</span>
         <mat-divider></mat-divider>
         <div class="d-flex justify-content-center align-items-center  h-100">
           <span class="homeCounterText">{{totalPatients}} </span>
@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="col-sm text-center p-3">
-          Visits Burndown
+          <span i18n>Visits Burndown</span> 
         <mat-divider></mat-divider>
         <div style="display: block">
           <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"

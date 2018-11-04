@@ -9,51 +9,51 @@
     <div class="row">
       <div class="col-sm">
         <mat-form-field class="w-100">
-          <input c matInput placeholder="Last Name" [(ngModel)]="patient.lastName" required>
+          <input c matInput i18n-placeholder placeholder="Last Name" [(ngModel)]="patient.lastName" required>
         </mat-form-field>
       </div>
       <div class="col-sm">
         <mat-form-field class="w-100">
-          <input matInput placeholder="First Name" [(ngModel)]="patient.firstName" required>
+          <input matInput i18n-placeholder placeholder="First Name" [(ngModel)]="patient.firstName" required>
         </mat-form-field>
       </div>
       <div class="col-sm">
         <mat-form-field class="w-100">
-          <mat-select required placeholder="Doctor" [(ngModel)]="patient.doctor">
+          <mat-select required i18n-placeholder placeholder="Doctor" [(ngModel)]="patient.doctor">
             <mat-option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.lastName }} {{ doctor.firstName }}</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
     </div>
     <br>
-    Patient Addresses
+  <span i18n>Patient Addresses</span>  
     <mat-divider></mat-divider>
     <br>
-    <button mat-raised-button color="primary" (click)="addAddress()">Add Address <i class="iconButton fa fa-plus-circle"></i></button>
+    <button mat-raised-button color="primary" (click)="addAddress()"><span i18n> Add Address </span><i class="iconButton fa fa-plus-circle"></i></button>
     <br>
     <br>
     <ng-container *ngFor="let address of patient.addresses">
       <div class="row">
         <div class="col-sm">
           <mat-form-field class="w-100">
-            <mat-select required placeholder="Location" [(ngModel)]="address.type">
+            <mat-select required i18n-placeholder placeholder="Location" [(ngModel)]="address.type">
               <mat-option *ngFor="let location of locations" [value]="location">{{ location }}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
         <div class="col-sm">
           <mat-form-field class="w-100">
-            <input matInput placeholder="Email" type="email" [(ngModel)]="address.email" required>
+            <input matInput i18n-placeholder placeholder="Email" type="email" [(ngModel)]="address.email" required>
           </mat-form-field>
         </div>
         <div class="col-sm">
           <mat-form-field class="w-100">
-            <input matInput placeholder="Phone Number" [(ngModel)]="address.phone" type="text" required>
+            <input matInput i18n-placeholder placeholder="Phone Number" [(ngModel)]="address.phone" type="text" required>
           </mat-form-field>
         </div>
         <div class="col-sm"> 
           <mat-form-field class="w-100">
-            <input matInput ngx-google-places-autocomplete placeholder="Address" [(ngModel)]="address.street" type="text"
+            <input matInput ngx-google-places-autocomplete i18n-placeholder placeholder="Address" [(ngModel)]="address.street" type="text"
               required>
           </mat-form-field>
         </div>
@@ -61,7 +61,7 @@
     </ng-container>
     <div class="row">
       <div class="col-sm">
-        <button mat-raised-button color="primary" (click)="save()">Save <i class="iconButton fa fa-save"></i></button>
+        <button mat-raised-button color="primary" (click)="save()"><span i18n> Save </span><i class="iconButton fa fa-save"></i></button>
       </div>
     </div>
 
