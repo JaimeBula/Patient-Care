@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { BackendServiceService } from "../backend-service.service";
-import { Doctor, Patient } from "../patient";
+import { Doctor, Patient, Address } from "../patient";
 import { Router, ActivatedRoute } from "@angular/router";
 import { ToastsystemService } from "../toastsystem.service";
 import { ToastType } from "../toastsystem/toastsystem.component";
@@ -26,16 +26,24 @@ export class AddnewpatientComponent implements OnInit {
       var patientID = params["patientID"];
       if (patientID != null) {
         this.loadPatient(patientID);
+      } else {
+        this.patient = new Patient();
+        this.patient.id = 0;
       }
     });
   }
 
   doctors: Doctor[];
   patient: Patient;
+  locations = [
+    "HOME",
+    "SECOND HOME",
+    "WORK",
+    "HOLIDAY PLACE",
+    "CLOSE RELATIVE"
+  ];
 
   initializeForm() {
-    this.patient = new Patient();
-    this.patient.id = 0;
     this.backendService.getAllDoctors().then((data: Doctor[]) => {
       this.doctors = data;
     });
@@ -50,5 +58,10 @@ export class AddnewpatientComponent implements OnInit {
 
   save() {
     this.toast.ShowToastMessage(ToastType.Information, "Toast Message Test");
+  }
+
+  addAddress() {
+    var tmpAddress = new Address();
+    this.patient.addresses.push(tmpAddress);
   }
 }

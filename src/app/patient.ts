@@ -17,6 +17,11 @@ export class Person {
 }
 
 export class Patient extends Person {
+  constructor(){
+    super();
+
+    this.addresses = new Array<Address>();
+  }
   registeredDate: Date;
   doctor: number;
   addresses: Address[];

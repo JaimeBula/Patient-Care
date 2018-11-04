@@ -6,7 +6,7 @@ import { RouterModule, Routes, CanActivate } from "@angular/router";
 import { ListpatientsComponent } from './listpatients/listpatients.component';
 import { AddnewpatientComponent } from './addnewpatient/addnewpatient.component';
 
-const routes: Routes = [
+export  const routes: Routes = [
   {
     path: "",
    // canActivate: [AuthGuard],
@@ -29,7 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule, routes],
   declarations: []
 })
 export class AppRoutingModule { }

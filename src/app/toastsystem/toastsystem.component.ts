@@ -9,9 +9,16 @@ import { MatBottomSheetRef } from "@angular/material";
 })
 export class ToastsystemComponent implements OnInit {
   constructor(private bottomSheetRef: MatBottomSheetRef<ToastsystemComponent>) {
-    this.toastConfig = <ToastSystemConfig>(
-      this.bottomSheetRef.containerInstance.bottomSheetConfig.data
-    );
+    if (this.bottomSheetRef.containerInstance != undefined) {
+      this.toastConfig = <ToastSystemConfig>(
+        this.bottomSheetRef.containerInstance.bottomSheetConfig.data
+      );
+    } else {
+      this.toastConfig = new ToastSystemConfig(
+        ToastType.Information,
+        "Generic Message"
+      );
+    }
   }
 
   toastConfig: ToastSystemConfig;
@@ -40,7 +47,7 @@ export class ToastsystemComponent implements OnInit {
     }
   }
 
-  notificationClick(){
+  notificationClick() {
     this.bottomSheetRef.dismiss();
   }
 }
