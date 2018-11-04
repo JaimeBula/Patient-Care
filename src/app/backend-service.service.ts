@@ -30,7 +30,11 @@ export class BackendServiceService {
     return this.patients;
   }
 
-  getAllDoctors(): Doctor[] {
+  async getAllDoctors(): Promise<Doctor[]> {
+    if (this.doctors === undefined) {
+      await this.initializeMemoryStorage();
+    }
+
     return this.doctors;
   }
 

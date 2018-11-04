@@ -1,3 +1,45 @@
-<p>
-  addnewpatient works!
-</p>
+<div class="patientFormContainer">
+  Patient Information
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <mat-form-field>
+          <input matInput placeholder="Last Name" required>
+        </mat-form-field>
+      </div>
+      <div class="col-sm">
+        <mat-form-field>
+          <input matInput placeholder="First Name" required>
+        </mat-form-field>
+      </div>
+      <div class="col-sm">
+        <mat-form-field>
+          <mat-select required placeholder="Doctor">
+            <mat-option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.lastName }} {{ doctor.firstName }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="row">
+      <div class="col-sm">
+        <mat-form-field>
+          <input matInput placeholder="Email" type="email" required>
+        </mat-form-field>
+      </div>
+      <div class="col-sm">
+        <mat-form-field>
+          <input matInput placeholder="Phone Number" type="text" required>
+        </mat-form-field>
+      </div>
+      <div class="col-sm">
+        <mat-form-field>
+          <input matInput ngx-google-places-autocomplete placeholder="Address" type="text" required>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
