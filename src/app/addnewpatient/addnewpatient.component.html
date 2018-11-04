@@ -1,22 +1,25 @@
 <div class="patientFormContainer">
-  Patient Information
+  Patient Information <br>
+  <ng-container *ngIf="patient.registeredDate">
+    Registered Since: {{patient.registeredDate | date:'longDate'}}
+  </ng-container>
   <mat-divider></mat-divider>
   <br>
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm">
-        <mat-form-field>
-          <input matInput placeholder="Last Name" [(ngModel)]="patient.lastName"   required>
+        <mat-form-field class="w-100">
+          <input c matInput placeholder="Last Name" [(ngModel)]="patient.lastName" required>
         </mat-form-field>
       </div>
       <div class="col-sm">
-        <mat-form-field>
-          <input matInput placeholder="First Name" [(ngModel)]="patient.firstName"  required>
+        <mat-form-field class="w-100">
+          <input matInput placeholder="First Name" [(ngModel)]="patient.firstName" required>
         </mat-form-field>
       </div>
       <div class="col-sm">
-        <mat-form-field>
-          <mat-select required placeholder="Doctor" [(ngModel)]="patient.doctor" >
+        <mat-form-field class="w-100">
+          <mat-select required placeholder="Doctor" [(ngModel)]="patient.doctor">
             <mat-option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.lastName }} {{ doctor.firstName }}</mat-option>
           </mat-select>
         </mat-form-field>
@@ -26,47 +29,42 @@
     Patient Addresses
     <mat-divider></mat-divider>
     <br>
-    <button mat-raised-button color="primary" (click)="addAddress()">Add Address</button>
+    <button mat-raised-button color="primary" (click)="addAddress()">Add Address <i class="iconButton fa fa-plus-circle"></i></button>
     <br>
     <br>
     <ng-container *ngFor="let address of patient.addresses">
-    <div class="row">
+      <div class="row">
         <div class="col-sm">
-            <mat-form-field>
-              <mat-select required placeholder="Location" [(ngModel)]="address.type" >
-                <mat-option *ngFor="let location of locations" [value]="location">{{ location }}</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-      <div class="col-sm">
-        <mat-form-field>
-          <input matInput placeholder="Email" type="email"  [(ngModel)]="address.email" required>
-        </mat-form-field>
+          <mat-form-field class="w-100">
+            <mat-select required placeholder="Location" [(ngModel)]="address.type">
+              <mat-option *ngFor="let location of locations" [value]="location">{{ location }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm">
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Email" type="email" [(ngModel)]="address.email" required>
+          </mat-form-field>
+        </div>
+        <div class="col-sm">
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Phone Number" [(ngModel)]="address.phone" type="text" required>
+          </mat-form-field>
+        </div>
+        <div class="col-sm"> 
+          <mat-form-field class="w-100">
+            <input matInput ngx-google-places-autocomplete placeholder="Address" [(ngModel)]="address.street" type="text"
+              required>
+          </mat-form-field>
+        </div>
       </div>
-      <div class="col-sm">
-        <mat-form-field>
-          <input matInput placeholder="Phone Number" [(ngModel)]="address.phone" type="text" required>
-        </mat-form-field>
-      </div>
-      <div class="col-sm">
-        <mat-form-field>
-          <input matInput ngx-google-places-autocomplete placeholder="Address"  [(ngModel)]="address.street" type="text" required>
-        </mat-form-field>
-      </div>
-    </div>
     </ng-container>
     <div class="row">
-        <div class="col-sm">
-      
-        </div>
-        <div class="col-sm">
-         
-        </div>
-        <div class="col-sm">
-            <button mat-raised-button color="primary" (click)="save()">Save</button>
+      <div class="col-sm">
+        <button mat-raised-button color="primary" (click)="save()">Save <i class="iconButton fa fa-save"></i></button>
       </div>
+    </div>
+
+
+
   </div>
-
-
-
-</div>
