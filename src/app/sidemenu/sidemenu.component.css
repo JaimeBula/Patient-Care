@@ -1,53 +1,72 @@
 a:link {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 a:visited {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 a:hover {
-    color:  #673ab7;
+  color: #673ab7;
 }
 
-.menuItemContainer{
-    height: 50px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 3px;
-    border-bottom-color: #1e2127;
-    border-style: solid;
+.menuItemContainer {
+  height: 50px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 3px;
+  border-bottom-color: #1e2127;
+  border-style: solid;
 }
 
-.menuAvatar{
-    height: 100px;
+.menuAvatar {
+  height: 100px;
 }
 
-.avatarTitle{
-    color: #ffffff;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 12px;
+.avatarTitle {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
 }
 
-.avatarImage{
-    height: 75px;
-
+.avatarImage {
+  height: 75px;
 }
 
-.avatarName{
-    color: #ffffff;
-    line-height: 12px;
+.avatarName {
+  color: #ffffff;
+  line-height: 12px;
 }
 
-.avatarNameContainer{
-    margin-top: 20px;
+.avatarNameContainer {
+  margin-top: 20px;
 }
 
-.menuIcon{
-    color: #ffffff;
-    font-size: 22px;
-    margin-right: 15px;
-    margin-left: 25px;
+.menuIcon {
+  color: #ffffff;
+  font-size: 22px;
+  margin-right: 15px;
+  margin-left: 25px;
+}
+
+.shutDownText {
+  margin-right: 5px;
+}
+
+.shutDownIcon {
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.logOutButton {
+  width: 270px;
+  height: 50px;
+  background-color: #22262e;
+  color: #4d535c;
+}
+
+.logOutContainer {
+  height: calc( 100% - 350px);
 }

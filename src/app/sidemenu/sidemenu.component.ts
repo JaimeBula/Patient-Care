@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { ShellComponent } from '../shell/shell.component';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(ShellComponent) private shell: ShellComponent) { }
 
   ngOnInit() {
   }
 
+  toggle(){
+    this.shell.toggle();
+  }
 }

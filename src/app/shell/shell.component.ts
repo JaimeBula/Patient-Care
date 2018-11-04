@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild, HostListener } from "@angular/core";
 import { BackendServiceService } from "../backend-service.service";
 import { MatSidenav } from "@angular/material";
 
@@ -10,10 +10,23 @@ import { MatSidenav } from "@angular/material";
 export class ShellComponent implements OnInit {
   constructor(private backendService: BackendServiceService) {}
 
+  @HostListener("window:resize", ["$event"])
+  onResize(event) {
+    if (window.innerWidth < 600) {
+      this.nav.close();
+    } else {
+      this.nav.open();
+    }
+  }
+
   @ViewChild("snav")
   nav: MatSidenav;
 
   ngOnInit() {
+    if (window.innerWidth < 600) {
+      this.nav.close();
+    }
+
     this.backendService.initializeMemoryStorage();
   }
 
