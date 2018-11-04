@@ -38,6 +38,15 @@ export class BackendServiceService {
     return this.doctors;
   }
 
+  async getPatient(patientId: number): Promise<Patient> {
+    if (this.patients === undefined) {
+      await this.initializeMemoryStorage();
+    }
+
+    var patient = this.patients.find(x => x.id == patientId);
+    return patient;
+  }
+
   async getPatientView(): Promise<PatientView[]> {
     console.log(this.patients);
     let patientViewList = new Array<PatientView>();

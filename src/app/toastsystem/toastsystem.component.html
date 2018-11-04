@@ -1,0 +1,29 @@
+<div class="toastSystemContainer">
+    <ng-container *ngIf="checkEnumError(toastConfig.toastType)">
+      <div class="toastHeader toastErrorHeader d-flex flex-column justify-content-center align-items-center">
+        <img src="assets/images/icon-not-sorry.png" class="img-fluid toastIcon">
+      </div>
+    </ng-container>
+    <ng-container *ngIf="checkEnumInfo(toastConfig.toastType)">
+      <div class="toastHeader toastInfoHeader d-flex flex-column justify-content-center align-items-center ">
+        <img src="assets/images/icon-not-ok.png" class="img-fluid toastIcon">
+      </div>
+    </ng-container>
+    <div class="w-100 d-flex align-items-center justify-content-center">
+      <div class="toastHeaderContainer">
+        <span class="toastHeaderTitle">{{headerText}}</span>
+      </div>
+    </div>
+    <div class="w-100 d-flex align-items-center justify-content-center">
+      <div class="toastMessageContainer">
+        <p>
+          {{toastConfig.message}}
+        </p>
+      </div>
+    </div>
+    <div class="toastFooter w-100 d-flex align-items-center justify-content-center legaloSelectable" (click)="notificationClick();">
+      <div>
+        <span class="notificationConfirmText">{{confirmText}}</span>
+      </div>
+    </div>
+  </div>

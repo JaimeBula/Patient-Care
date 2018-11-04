@@ -20,6 +20,7 @@ const routes: Routes = [
     children: [
       { path: "home", component: HomeComponent },
       {path: "listpatients", component: ListpatientsComponent},
+      {path: "newpatient/:patientID", component: AddnewpatientComponent},
       {path: "newpatient", component: AddnewpatientComponent}
     ]
   }

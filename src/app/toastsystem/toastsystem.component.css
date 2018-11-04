@@ -1,0 +1,20 @@
+@media screen and (min-width: 601px) {
+  .legaloTextArea {
+    height: 500px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .legaloTextArea {
+    height: 150px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .legaloTextArea {
+    height: 120px;
+    padding: 10px;
+  }
+}

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { BackendServiceService } from "../backend-service.service";
 import { Patient, PatientView } from "../patient";
 import { MatPaginator, MatSort, MatTableDataSource } from "@angular/material";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-listpatients",
@@ -9,7 +10,11 @@ import { MatPaginator, MatSort, MatTableDataSource } from "@angular/material";
   styleUrls: ["./listpatients.component.css"]
 })
 export class ListpatientsComponent implements OnInit {
-  constructor(private backendService: BackendServiceService) {}
+  constructor(
+    private backendService: BackendServiceService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   @ViewChild(MatPaginator)
   @ViewChild(MatSort)
@@ -25,7 +30,7 @@ export class ListpatientsComponent implements OnInit {
     "street",
     "city",
     "zip",
-    "country", 
+    "country",
     "view"
   ];
 
@@ -40,7 +45,7 @@ export class ListpatientsComponent implements OnInit {
     });
   }
 
-  selectRow(row: Patient) {
-    console.log(row);
+  selectRow(patient: Patient) {
+    this.router.navigate(["main/newpatient", patient.id]);
   }
 }

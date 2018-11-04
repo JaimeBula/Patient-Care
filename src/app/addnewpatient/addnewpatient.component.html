@@ -4,17 +4,17 @@
     <div class="row">
       <div class="col-sm">
         <mat-form-field>
-          <input matInput placeholder="Last Name" required>
+          <input matInput placeholder="Last Name" [(ngModel)]="patient.lastName"   required>
         </mat-form-field>
       </div>
       <div class="col-sm">
         <mat-form-field>
-          <input matInput placeholder="First Name" required>
+          <input matInput placeholder="First Name" [(ngModel)]="patient.firstName"  required>
         </mat-form-field>
       </div>
       <div class="col-sm">
         <mat-form-field>
-          <mat-select required placeholder="Doctor">
+          <mat-select required placeholder="Doctor" [(ngModel)]="patient.doctor" >
             <mat-option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.lastName }} {{ doctor.firstName }}</mat-option>
           </mat-select>
         </mat-form-field>

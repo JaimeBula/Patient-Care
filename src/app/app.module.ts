@@ -23,9 +23,13 @@ import {
   MatSortModule,
   MatButtonModule,
   MatSelectModule,
-  MatDividerModule
+  MatDividerModule,
+  MatBottomSheetConfig,
+  MatBottomSheetModule
 } from "@angular/material";
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { FormsModule } from "@angular/forms";
+import { ToastsystemComponent } from './toastsystem/toastsystem.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,8 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     SidemenuComponent,
     ShowpatientComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ToastsystemComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +59,11 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     MatSelectModule,
     GooglePlaceModule,
     BrowserModule,
-    MatDividerModule
+    MatDividerModule,
+    FormsModule,
+    MatBottomSheetModule
   ],
-  providers: [],
+  providers: [MatBottomSheetConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
