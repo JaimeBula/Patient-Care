@@ -8,10 +8,11 @@ import { Doctor, Patient } from "../patient";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  constructor(private backendService: BackendServiceService) {}
+  constructor(private backendService: BackendServiceService) {
+    this.doughnutChartData = new Array<number>();
+  }
 
   ngOnInit() {
-    this.doughnutChartData = new Array<number>();
     this.createDoctorChart();
     this.createPatientCounter();
   }

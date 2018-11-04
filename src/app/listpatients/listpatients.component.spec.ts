@@ -26,6 +26,7 @@ import { Location } from "@angular/common";
 import { ShellComponent } from "../shell/shell.component";
 import { HomeComponent } from "../home/home.component";
 import { AddnewpatientComponent } from "../addnewpatient/addnewpatient.component";
+import { ChartsModule } from "ng2-charts";
 
 describe("ListpatientsComponent", () => {
   let component: ListpatientsComponent;
@@ -46,7 +47,7 @@ describe("ListpatientsComponent", () => {
         MatInputModule,
         BrowserAnimationsModule,
         RouterTestingModule.withRoutes(routes),
-        MatTableModule
+        MatTableModule, ChartsModule
       ],
       declarations: [
         ListpatientsComponent,
@@ -62,6 +63,7 @@ describe("ListpatientsComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ListpatientsComponent);
     component = fixture.componentInstance;
+    component.ngOnInit();
     fixture.detectChanges();
   });
 
