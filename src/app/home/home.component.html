@@ -1,10 +1,36 @@
-<p>
-  Welcome to the Patient Care System. Please choose any option on the menu. 
-</p>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-sm"></div>
+<div class="p-2">
+  <h5>
+    Welcome to Patient Care.
+  </h5>
+  <mat-divider></mat-divider>
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm text-center p-3">
+        Doctors by Title
+        <mat-divider></mat-divider>
+        <div style="display: block">
+          <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+        </div>
+      </div>
+      <br>
+      <div class="col-sm text-center p-3">
+        Total Patients
+        <mat-divider></mat-divider>
+        <div class="d-flex justify-content-center align-items-center  h-100">
+          <span class="homeCounterText">{{totalPatients}} </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm text-center p-3">
+          Visits Burndown
+        <mat-divider></mat-divider>
+        <div style="display: block">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType"></canvas>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

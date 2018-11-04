@@ -31,6 +31,8 @@ import {
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FormsModule } from "@angular/forms";
 import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
     ShowpatientComponent,
     HeaderComponent,
     FooterComponent,
-    ToastsystemComponent
+    ToastsystemComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
     MatDividerModule,
     FormsModule,
     MatBottomSheetModule,
-    MatRippleModule
+    MatRippleModule,
+    ChartsModule
   ],
   providers: [MatBottomSheetConfig],
   bootstrap: [AppComponent],

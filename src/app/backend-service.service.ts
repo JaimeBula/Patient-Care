@@ -26,7 +26,11 @@ export class BackendServiceService {
     console.log("Data Loaded from JSON Files");
   }
 
-  getAllPatients(): Patient[] {
+  async getAllPatients(): Promise<Patient[]> {
+    if (this.patients === undefined) {
+      await this.initializeMemoryStorage();
+    }
+    
     return this.patients;
   }
 
