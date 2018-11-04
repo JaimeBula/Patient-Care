@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, LOCALE_ID } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
@@ -31,8 +31,7 @@ import {
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FormsModule } from "@angular/forms";
 import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
-import { ChartsModule } from 'ng2-charts/ng2-charts';
-
+import { ChartsModule } from "ng2-charts/ng2-charts";
 
 @NgModule({
   declarations: [
@@ -45,8 +44,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     ShowpatientComponent,
     HeaderComponent,
     FooterComponent,
-    ToastsystemComponent,
-
+    ToastsystemComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +65,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     FormsModule,
     MatBottomSheetModule,
     MatRippleModule,
-    ChartsModule,
-    
+    ChartsModule
   ],
-  providers: [MatBottomSheetConfig],
+  providers: [MatBottomSheetConfig, { provide: LOCALE_ID, useValue: "en" }],
   bootstrap: [AppComponent],
   entryComponents: [ToastsystemComponent]
 })
