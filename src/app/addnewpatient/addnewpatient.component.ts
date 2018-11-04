@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { BackendServiceService } from "../backend-service.service";
 import { Doctor, Patient } from "../patient";
 import { Router, ActivatedRoute } from "@angular/router";
+import { ToastsystemService } from "../toastsystem.service";
+import { ToastType } from "../toastsystem/toastsystem.component";
 
 @Component({
   selector: "app-addnewpatient",
@@ -12,7 +14,8 @@ export class AddnewpatientComponent implements OnInit {
   constructor(
     private backendService: BackendServiceService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private toast: ToastsystemService
   ) {}
 
   ngOnInit() {
@@ -31,6 +34,8 @@ export class AddnewpatientComponent implements OnInit {
   patient: Patient;
 
   initializeForm() {
+    this.patient = new Patient();
+    this.patient.id = 0;
     this.backendService.getAllDoctors().then((data: Doctor[]) => {
       this.doctors = data;
     });
@@ -41,5 +46,9 @@ export class AddnewpatientComponent implements OnInit {
       console.log(data);
       this.patient = data;
     });
+  }
+
+  save() {
+    this.toast.ShowToastMessage(ToastType.Information, "Toast Message Test");
   }
 }

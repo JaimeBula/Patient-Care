@@ -1,20 +1,47 @@
-@media screen and (min-width: 601px) {
-  .legaloTextArea {
-    height: 500px;
-  }
+.toastSystemContainer {
+  height: auto;
+  z-index: 2000;
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  .legaloTextArea {
-    height: 150px;
-    padding: 10px;
-  }
+.toastHeader {
+  height: 90px;
+  width: 100%;
+  color: white;
+  margin-bottom: 5px;
 }
 
-@media screen and (max-width: 320px) {
-  .legaloTextArea {
-    height: 120px;
-    padding: 10px;
-  }
+.toastErrorHeader {
+  background-color: #f48395;
+}
+
+.toastInfoHeader {
+  background-color: #673ab7;
+}
+
+.toastFooter {
+  background-color: #dbdbdb;
+  height: 70px;
+  color: #8d8d8d;
+}
+
+.toastIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.toastMessageContainer {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #8d8d8d ;
+}
+
+.toastHeaderTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #8d8d8d ;
+}
+
+.notificationConfirmText
+{
+  font-size: 18px;
 }

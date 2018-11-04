@@ -29,7 +29,7 @@ import {
 } from "@angular/material";
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FormsModule } from "@angular/forms";
-import { ToastsystemComponent } from './toastsystem/toastsystem.component';
+import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
 
 @NgModule({
   declarations: [
@@ -64,6 +64,7 @@ import { ToastsystemComponent } from './toastsystem/toastsystem.component';
     MatBottomSheetModule
   ],
   providers: [MatBottomSheetConfig],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ToastsystemComponent]
 })
 export class AppModule {}
