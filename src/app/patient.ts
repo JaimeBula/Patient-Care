@@ -1,3 +1,5 @@
+import { ThrowStmt } from "@angular/compiler";
+
 export class Address {
   type: string;
   email: string;
@@ -8,7 +10,7 @@ export class Address {
   country: string;
 }
 
-export class Person{
+export class Person {
   id: number;
   firstName: string;
   lastName: string;
@@ -16,8 +18,7 @@ export class Person{
 
 export class Patient extends Person {
   registeredDate: Date;
-  firstName: string;
-  lastName: string;
+  doctor: number;
   addresses: Address[];
 }
 
@@ -25,3 +26,18 @@ export class Doctor extends Person {
   title: string;
 }
 
+export class PatientView extends Patient {
+  doctorName: Doctor;
+  address: Address
+
+  constructor(patient: Patient, doctor: Doctor) {
+    super();
+    this.id = patient.id;
+    this.firstName = patient.firstName;
+    this.lastName = patient.lastName;
+    this.registeredDate = patient.registeredDate;
+    this.doctor = patient.doctor;
+    this.address = patient.addresses[0];
+    this.doctorName = doctor;
+  }
+}

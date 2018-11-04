@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendServiceService } from '../backend-service.service';
 
 @Component({
   selector: 'app-shell',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShellComponent implements OnInit {
 
-  constructor() { }
+  constructor(private backendService: BackendServiceService) { }
 
   ngOnInit() {
+    this.backendService.initializeMemoryStorage();
   }
 
 }
