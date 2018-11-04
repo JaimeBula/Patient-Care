@@ -14,6 +14,19 @@ export class BackendServiceService {
   private patients: Patient[];
   private doctors: Doctor[];
 
+  savePatient(patient: Patient) {
+    if (patient.id == 0) {
+      //it's new
+
+      var maxId = this.patients.reduce((oa, u) => Math.max(oa, u.id), 0);
+      patient.id = maxId + 1;
+      patient.registeredDate = new Date();
+      this.patients.push(patient);
+    } else {
+      // TODO: Update Patient
+    }
+  }
+
   async initializeMemoryStorage(): Promise<any> {
     this.patients = <Patient[]>(
       await this.http.get<Patient[]>("./assets/data/patients.json").toPromise()
@@ -30,7 +43,7 @@ export class BackendServiceService {
     if (this.patients === undefined) {
       await this.initializeMemoryStorage();
     }
-    
+
     return this.patients;
   }
 

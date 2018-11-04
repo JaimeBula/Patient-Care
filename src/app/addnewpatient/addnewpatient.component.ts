@@ -57,7 +57,10 @@ export class AddnewpatientComponent implements OnInit {
   }
 
   save() {
-    this.toast.ShowToastMessage(ToastType.Information, "Toast Message Test");
+
+    this.backendService.savePatient(this.patient);
+    this.toast.ShowToastMessage(ToastType.Information, "Patient Saved!");
+    this.router.navigateByUrl("main/home");
   }
 
   addAddress() {
