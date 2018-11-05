@@ -43,6 +43,8 @@ export class HomeComponent implements OnInit {
     { data: [28, 48, 40, 19, 86, 27, 90], label: "Pending Visits" }
   ];
 
+  public doughnutChartColors: any[] = [{ backgroundColor: ["#6d5b97", "#844981", "#868fc6", "#a96483","#6d5b97", "#844981", "#868fc6", "#a96483"] }];
+
   createDoctorChart() {
     this.backendService.getAllDoctors().then((doctors: Doctor[]) => {
       console.log(doctors);

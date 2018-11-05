@@ -15,8 +15,8 @@ a:hover {
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-bottom: 3px;
-  border-bottom-color: #1e2127;
+  border-bottom: 2px;
+  border-bottom-color: #343942;
   border-style: solid;
 }
 
@@ -27,7 +27,7 @@ a:hover {
 .avatarTitle {
   color: #ffffff;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
 }
 
@@ -38,10 +38,12 @@ a:hover {
 .avatarName {
   color: #ffffff;
   line-height: 12px;
+  font-size: 18px;
 }
 
 .avatarNameContainer {
   margin-top: 20px;
+  margin-left: 15px;
 }
 
 .menuIcon {
@@ -64,7 +66,7 @@ a:hover {
   width: 270px;
   height: 50px;
   background-color: #22262e;
-  color: #4d535c;
+  color: #6a727e;
 }
 
 .logOutContainer {

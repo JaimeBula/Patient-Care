@@ -1,5 +1,8 @@
 footer {
   height: 55px;
-  background-color: #d9d9d9;
+  background-color: #dae2e8;
 }
 
+.footerText{
+  font-size: 12px;
+}

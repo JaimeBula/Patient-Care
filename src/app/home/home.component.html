@@ -1,36 +1,37 @@
 <div class="p-2">
+  <br>
   <h5 i18n>
     Welcome to Patient Care.
   </h5>
   <mat-divider></mat-divider>
-  <br>
+  <br><br>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm text-center p-3">
-       <span i18n>Soctors by Title</span>
+        <span i18n>Doctors by Title</span>
         <mat-divider></mat-divider>
-        <div style="display: block">
-          <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+        <div class="h-100 d-flex align-items-center" style="background-color: #ffffff">
+          <canvas baseChart [colors]="doughnutChartColors" [data]="doughnutChartData" [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType"></canvas>
         </div>
       </div>
       <br>
       <div class="col-sm text-center p-3">
-          <span i18n>Total Patients</span>
+        <span i18n>Total Patients</span>
         <mat-divider></mat-divider>
-        <div class="d-flex justify-content-center align-items-center  h-100">
+        <div class="d-flex justify-content-center align-items-center  h-100" style="display: block; background-color: #ffffff">
           <span class="homeCounterText">{{totalPatients}} </span>
         </div>
       </div>
-    </div>
-    <div class="row">
+
       <div class="col-sm text-center p-3">
-          <span i18n>Visits Burndown</span> 
+        <span i18n>Visits Burndown</span>
         <mat-divider></mat-divider>
-        <div style="display: block">
-          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
-            [chartType]="barChartType"></canvas>
+        <div  class="h-100 d-flex align-items-center" style="background-color: #ffffff">
+          <canvas baseChart [datasets]="barChartData" [colors]="doughnutChartColors" [labels]="barChartLabels"
+            [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
         </div>
       </div>
     </div>
   </div>
-</div>
