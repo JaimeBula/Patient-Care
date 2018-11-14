@@ -1,7 +1,9 @@
-<dx-scheduler
-    [dataSource]="appointmentsData"
-    [views]='["agenda"]'
-    currentView="agenda"
-    [currentDate]="currentDate"
-    [startDayHour]="9">
-</dx-scheduler>
+<kendo-scheduler [kendoSchedulerBinding]="events" [selectedDate]="selectedDate">
+  <kendo-scheduler-day-view [startTime]="startTime"> </kendo-scheduler-day-view>
+
+  <kendo-scheduler-week-view [startTime]="startTime">
+  </kendo-scheduler-week-view>
+
+  <kendo-scheduler-month-view> </kendo-scheduler-month-view>
+  <kendo-scheduler-agenda-view> </kendo-scheduler-agenda-view>
+</kendo-scheduler>

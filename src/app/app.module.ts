@@ -32,6 +32,9 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FormsModule } from "@angular/forms";
 import { ToastsystemComponent } from "./toastsystem/toastsystem.component";
 import { ChartsModule } from "ng2-charts/ng2-charts";
+import { SchedulerModule } from '@progress/kendo-angular-scheduler';
+import { MainschedulerComponent } from "./mainscheduler/mainscheduler.component";
+
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { ChartsModule } from "ng2-charts/ng2-charts";
     ShowpatientComponent,
     HeaderComponent,
     FooterComponent,
-    ToastsystemComponent
+    ToastsystemComponent,
+    MainschedulerComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,8 @@ import { ChartsModule } from "ng2-charts/ng2-charts";
     FormsModule,
     MatBottomSheetModule,
     MatRippleModule,
-    ChartsModule
+    ChartsModule,
+    SchedulerModule
   ],
   providers: [MatBottomSheetConfig, { provide: LOCALE_ID, useValue: "en" }],
   bootstrap: [AppComponent],

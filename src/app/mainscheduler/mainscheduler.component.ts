@@ -1,19 +1,20 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import {Appointment, Service} from '../app.service';
+import { SchedulerEvent } from '@progress/kendo-angular-scheduler';
+import { sampleData, displayDate } from '../events-utc';
 
 @Component({
   selector: 'app-mainscheduler',
   templateUrl: './mainscheduler.component.html',
-  styleUrls: ['./mainscheduler.component.css'],
-  providers: [Service]
+  styleUrls: ['./mainscheduler.component.css']
 })
 export class MainschedulerComponent implements OnInit {
 
-  appointmentsData: Appointment[];
-  currentDate: Date = new Date(2017, 4, 11);
+  public selectedDate: Date = displayDate;
+    public startTime = '07:00';
+    public events: SchedulerEvent[] = sampleData;
 
-  constructor(service: Service) {
-      this.appointmentsData = service.getAppointments();
+  constructor() {
+   
   }
 
   ngOnInit() {
