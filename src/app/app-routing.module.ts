@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes, CanActivate } from "@angular/router";
 import { ListpatientsComponent } from './listpatients/listpatients.component';
 import { AddnewpatientComponent } from './addnewpatient/addnewpatient.component';
+import { MainschedulerComponent } from './mainscheduler/mainscheduler.component';
 
 export  const routes: Routes = [
   {
@@ -21,7 +22,8 @@ export  const routes: Routes = [
       { path: "home", component: HomeComponent },
       {path: "listpatients", component: ListpatientsComponent},
       {path: "newpatient/:patientID", component: AddnewpatientComponent},
-      {path: "newpatient", component: AddnewpatientComponent}
+      {path: "newpatient", component: AddnewpatientComponent},
+      {path: "scheduler", component: MainschedulerComponent}
     ]
   }
 ];

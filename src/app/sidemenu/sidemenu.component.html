@@ -1,41 +1,57 @@
-<br>
-<br>
+<br />
+<br />
 <div class="menuAvatar d-flex align-content-center justify-content-center">
   <div>
-    <img src="./assets/images/avatar.jpg" class="img-circle rounded-circle avatarImage" />
+    <img
+      src="./assets/images/avatar.jpg"
+      class="img-circle rounded-circle avatarImage"
+    />
   </div>
   <div class="avatarNameContainer">
-    <span class="avatarName">Joseph Lister</span> <br>
+    <span class="avatarName">Joseph Lister</span> <br />
     <span class="avatarTitle">Surgeon</span>
   </div>
 </div>
-<br>
+<br />
 <div class="menuItemContainer d-flex align-items-center justify-content-left">
-  <div>
-    <i class="fa fa-home menuIcon"></i>
-
-  </div>
+  <div><i class="fa fa-home menuIcon"></i></div>
   <div>
     <a [routerLink]="['/main/home']" preserveFragment (click)="toggle()" i18n>
       Home
-    </a></div>
+    </a>
+  </div>
 </div>
 <div class="menuItemContainer d-flex align-items-center justify-content-left">
-  <div>
-    <i class="fa fa-plus-circle menuIcon"></i>
-
-  </div>
-  <a [routerLink]="['/main/newpatient']" preserveFragment (click)="toggle()" i18n>
+  <div><i class="fa fa-plus-circle menuIcon"></i></div>
+  <a
+    [routerLink]="['/main/newpatient']"
+    preserveFragment
+    (click)="toggle()"
+    i18n
+  >
     Add New Patient
   </a>
 </div>
 <div class="menuItemContainer d-flex align-items-center justify-content-left">
-  <div>
-    <i class="fa fa-list-alt menuIcon"></i>
-
-  </div>
-  <a [routerLink]="['/main/listpatients']" preserveFragment (click)="toggle()" i18n>
+  <div><i class="fa fa-list-alt menuIcon"></i></div>
+  <a
+    [routerLink]="['/main/listpatients']"
+    preserveFragment
+    (click)="toggle()"
+    i18n
+  >
     List Patients
+  </a>
+</div>
+<div class="menuItemContainer d-flex align-items-center justify-content-left">
+  <div><i class="fa fa-calendar menuIcon"></i></div>
+  <a
+    [routerLink]="['/main/scheduler']"
+    preserveFragment
+    (click)="toggle()"
+    i18n
+  >
+    Main Scheduler
   </a>
 </div>
 
@@ -44,9 +60,6 @@
     <div>
       <span class="shutDownText" i18n>Log <b>Out</b></span>
     </div>
-    <div>
-      <i class="fa fa-power-off shutDownIcon"></i>
-    </div>
+    <div><i class="fa fa-power-off shutDownIcon"></i></div>
   </div>
-
 </div>
