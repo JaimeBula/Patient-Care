@@ -17,11 +17,11 @@ export class Person {
 }
 
 export class Patient extends Person {
-  constructor(){
+  constructor() {
     super();
 
     this.addresses = new Array<Address>();
-    let address = new Address();
+    const address = new Address();
     address.type = "HOME";
     this.addresses.push(address);
   }
@@ -36,7 +36,7 @@ export class Doctor extends Person {
 
 export class PatientView extends Patient {
   doctorName: Doctor;
-  address: Address
+  address: Address;
 
   constructor(patient: Patient, doctor: Doctor) {
     super();
