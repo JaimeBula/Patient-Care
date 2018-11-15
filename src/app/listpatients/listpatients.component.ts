@@ -20,7 +20,7 @@ export class ListpatientsComponent implements OnInit {
   @ViewChild(MatSort)
   sort: MatSort;
 
-  dataSource = new MatTableDataSource<Patient>();
+  dataSource: MatTableDataSource<PatientView> =  new MatTableDataSource<PatientView>();
   displayedColumns = [
     "lastName",
     "firstName",
