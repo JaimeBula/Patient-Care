@@ -6,7 +6,7 @@ const baseData: any[] = [
     {
         "TaskID": 4,
         "OwnerID": 2,
-        "Title": "Bowling tournament",
+        "Title": "Heart Treatment",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-09T21:00:00.000Z",
@@ -20,7 +20,7 @@ const baseData: any[] = [
     {
         "TaskID": 5,
         "OwnerID": 2,
-        "Title": "Take the dog to the vet",
+        "Title": "Apply Anabolic Stymulant",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-10T07:00:00.000Z",
@@ -34,7 +34,7 @@ const baseData: any[] = [
     {
         "TaskID": 6,
         "OwnerID": 2,
-        "Title": "Call Charlie about the project",
+        "Title": "Respiratory Therapy",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-11T11:30:00.000Z",
@@ -48,7 +48,7 @@ const baseData: any[] = [
     {
         "TaskID": 7,
         "OwnerID": 3,
-        "Title": "Meeting with Alex",
+        "Title": "Knee Therapy",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-12T11:00:00.000Z",
@@ -62,7 +62,7 @@ const baseData: any[] = [
     {
         "TaskID": 9,
         "OwnerID": 2,
-        "Title": "Alex's Birthday",
+        "Title": "Knee Therapy",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-14T02:00:00.000Z",
@@ -76,7 +76,7 @@ const baseData: any[] = [
     {
         "TaskID": 12,
         "OwnerID": 2,
-        "Title": "Car Service",
+        "Title": "Blood Service",
         "Description": "Might come to work later!",
         "StartTimezone": null,
         "Start": "2013-06-24T08:30:00.000Z",
@@ -91,7 +91,7 @@ const baseData: any[] = [
         "TaskID": 14,
         "OwnerID": 3,
         "RoomID": 2,
-        "Title": "Replace the printer on the 1st floor",
+        "Title": "Replace the Monitor on the 1st floor",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-24T10:00:00.000Z",
@@ -105,7 +105,7 @@ const baseData: any[] = [
     {
         "TaskID": 15,
         "OwnerID": 1,
-        "Title": "Attending HR Conference",
+        "Title": "Attending HB Issue",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-25T00:00:00.000Z",
@@ -119,7 +119,7 @@ const baseData: any[] = [
     {
         "TaskID": 16,
         "OwnerID": 1,
-        "Title": "Business Lunch with Gregory Watkins",
+        "Title": "Walk with Gregory Watkins",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-25T12:00:00.000Z",
@@ -133,7 +133,7 @@ const baseData: any[] = [
     {
         "TaskID": 17,
         "OwnerID": 1,
-        "Title": "Breakfast with CFO and COO",
+        "Title": "Replace Heart Monitor",
         "Description": "",
         "StartTimezone": null,
         "Start": "2013-06-27T08:30:00.000Z",
@@ -147,7 +147,7 @@ const baseData: any[] = [
     {
         "TaskID": 18,
         "OwnerID": 1,
-        "Title": "Job Interview - Mathew Stevens",
+        "Title": "Interview - Mathew Stevens",
         "Description": "Junior Researcher",
         "StartTimezone": null,
         "Start": "2013-06-27T10:00:00.000Z",
