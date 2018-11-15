@@ -2,12 +2,16 @@ import { Component, OnInit, ViewChild, HostListener } from "@angular/core";
 import { BackendServiceService } from "../backend-service.service";
 import { MatSidenav } from "@angular/material";
 
+@ViewChild("snav")
+
 @Component({
   selector: "app-shell",
   templateUrl: "./shell.component.html",
   styleUrls: ["./shell.component.css"]
 })
 export class ShellComponent implements OnInit {
+
+  nav: MatSidenav;
   constructor(private backendService: BackendServiceService) {}
 
   @HostListener("window:resize", ["$event"])
@@ -18,9 +22,6 @@ export class ShellComponent implements OnInit {
       this.nav.open();
     }
   }
-
-  @ViewChild("snav")
-  nav: MatSidenav;
 
   ngOnInit() {
     if (window.innerWidth < 600) {
